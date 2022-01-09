@@ -206,7 +206,7 @@ html,body {
     .images{
         width:10rem;
         height:8rem;
-        border: 4px solid goldenrod;
+        border: 4px solid #00FF33;
         border-radius: 2rem;
     }
     .project h3{
