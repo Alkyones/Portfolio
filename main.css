@@ -154,7 +154,7 @@ html,body {
 
 #profile-section {
     background-color:var(--prm-drkcolor);
-    color: red;
+    color: darkgoldenrod;
     text-align: center;
     display:flex;
     flex-direction:column;
