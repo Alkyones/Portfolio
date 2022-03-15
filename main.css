@@ -11,6 +11,8 @@ html,body {
    font-size:1.1rem;
    font-family:monospace;
    font-weight: 500;
+   min-width:20em;
+   min-height: 40em;
 
 }
 
@@ -22,6 +24,7 @@ html,body {
 .homelink a:hover {
     transition:1.1s;
     filter:brightness(2);
+    color:goldenrod;
 }
 
 .navlist{
@@ -60,8 +63,8 @@ html,body {
 
 .links {
     margin-left:0.77rem;
-    color:var(--text-col);
     text-decoration: none;
+    color: goldenrod;
     transition: 0.2s ease;
 }
 
@@ -69,6 +72,8 @@ html,body {
 .navlist a:hover {
     transition:1.1s;
     filter:brightness(2);
+    color:goldenrod !important;
+
     text-decoration: none;
 }
 
@@ -92,7 +97,7 @@ html,body {
 
 #projects-section {
     background-color:var(--prm-drkcolor);
-    color: #00FF33;
+    color: darkgoldenrod;
     display:block;
     width:100%;
     height:100vh;
@@ -113,7 +118,7 @@ html,body {
 .images{
     width:25rem;
     height:17rem;
-    border: 4px solid #00FF33;
+    border: 4px solid darkgoldenrod;
     border-radius: 2rem;
 
 }
@@ -127,11 +132,11 @@ html,body {
     width:10rem;
     height:4rem;
     border-radius: 2rem;
-    border: 1px solid #00FF33;
+    border: 1px solid darkgoldenrod;
     font-size:1.3rem;
     font-weight: 600;
     background-color:transparent;
-    color: #00FF33;
+    color: darkgoldenrod;
    
 }
 
@@ -142,14 +147,14 @@ html,body {
 }
 
 #projects-section button:hover {
-    background-color: #00FF33;
+    background-color: darkgoldenrod;
     color: var(--prm-drkcolor);
     transition: 1s ease-out;
 }
 
 #profile-section {
     background-color:var(--prm-drkcolor);
-    color: white;
+    color: darkgoldenrod;
     text-align: center;
     display:flex;
     flex-direction:column;
@@ -161,21 +166,72 @@ html,body {
 }
 
 #profile-section a {
-    border: 1px solid white;
+    border: 1px solid darkgoldenrod;
     cursor: pointer;
     margin-top:2rem;
+    margin-bottom: 1.2em;
     font-size:1.7rem;
     padding:0.5rem;
-    color:white;
+    color:darkgoldenrod;
     text-decoration: none;
     border-radius: 2rem;
     transition: 0.9s ease;
 }
 
+.skill-set-div h5 {
+    color: darkgoldenrod;
+    display: inline-block;
+}
+
+.skill-set-div > .skill {
+    width:10%;
+    border: 1px solid darkgoldenrod;
+    padding: 0.5rem;
+    border-radius: 0.63em;
+}
+.skill-set-div{
+    width:60%;
+    margin-top:2em;
+    display:flex;
+    justify-content: space-evenly
+}
+
+.hover-text {
+    position: relative;
+    border-bottom: 1px dotted black;
+    visibility: visible;
+    cursor: pointer;
+}
+  
+.hover-text:before {
+    content: attr(data-hover);
+    visibility: hidden;
+    opacity: 0;
+    width: 10em;
+    background-color: goldenrod;
+    font-weight: 600;
+    color: var(--prm-drkcolor);
+    text-align: center;
+    border-radius: 0.66em;
+    padding: 0.2em 0.4em;
+    transition: opacity 1.2s ease-in-out;
+  
+    position: absolute;
+    z-index: 1;
+    left: 40%;
+    top: 100%;
+  }
+  
+  .hover-text:hover:before {
+    opacity: 1;
+    visibility: visible;
+  }
+
+
 
 #profile-section a:hover {
+    background-color:goldenrod;
     color:var(--prm-drkcolor);
-    background-color:white;
     
 
 }
@@ -190,14 +246,17 @@ html,body {
 
 @media only screen and  (max-width:55em) {
     body {
+        width:100%;
         font-size: 0.1rem;
     }
     
     .navlist {
-        font-size:0.71rem;
+        font-size:1.1rem;
     }
-    
+
+
     .project-tile {
+        
         display:grid;
         grid-template-columns: 1fr 1fr;
         row-gap:1rem;
@@ -206,11 +265,56 @@ html,body {
     .images{
         width:10rem;
         height:8rem;
-        border: 4px solid #00FF33;
+        border: 4px solid darkgoldenrod;
         border-radius: 2rem;
     }
     .project h3{
         font-size: 1rem;
     }
+
+    .skill-set-div {
+        width:100%;
+        padding: 4em;
+    }
+    .skill {
+        border: 1px solid darkgoldenrod;
+        margin: 4em;
+
+    }
+    .skill  h5 {
+        font-size : 8.3em;
+    }
+
+    .hover-text {
+        width:100px;
+        position: relative;
+        border-bottom: 1px dotted black;
+        visibility: visible;
+        cursor: pointer;
+    }
+      
+    .hover-text:before {
+        content: attr(data-hover);
+        visibility: hidden;
+        opacity: 0;
+        background-color: goldenrod;
+        font-weight: 600;
+        color: var(--prm-drkcolor);
+        text-align: center;
+        border-radius: 0.66em;
+        padding: 0.1em 0.2em;
+        transition: opacity 1.2s ease-in-out;
+        font-size: 0.58rem;
+        position: absolute;
+        z-index: 1;
+        left: 0%;
+        top: 100%;
+      }
+      
+      .hover-text:hover:before {
+        opacity: 1;
+        visibility: visible;
+      }
+    
 
 }
