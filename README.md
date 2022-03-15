@@ -1,5 +1,4 @@
 # Portfolio
 
 Until i prepare my portfolio blog here you go!
-
-alkyones.github.io/Portfolio.2
+<a href='alkyones.github.io/Portfolio.2' target='_blank'>Resume and stuff!</a>
